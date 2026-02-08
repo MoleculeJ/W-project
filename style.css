@@ -1,0 +1,182 @@
+/* COLOR 
+ RED #C81D25
+ PINK #FFADC6
+ ORANGE #FFD29D
+ LIGHT BLUE #92DCE5
+ GREEN #AEFFD8
+ PURPLE #F5ADFF */
+
+/* FONT 
+All Content: Delius Regular
+font-family: "Delius", cursive;
+font-weight: 400;
+font-style: normal;
+*/
+
+/* DEFAULT */
+body {
+    margin: 0;
+    font-family: "Delius", cursive;
+    color: black;
+    scroll-behavior: smooth;    
+}
+
+/*--------Landing---------*/
+.landing {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-image: url("pink.jpg");
+    background-size: cover;
+    background-attachment: fixed; 
+    overflow: visible;
+    transition: background-image 0.3s ease-in-out;
+}
+
+.landing.orange {
+    background-image: url("orange.jpg");
+}
+
+.landing.blue {
+    background-image: url("blue.jpg");
+}
+
+.landing.green {
+    background-image: url("green.jpg");
+}
+
+.landing.purple {
+    background-image: url("purple.jpg");
+}
+
+.preload {
+        width: 0;
+        height: 0;
+        overflow: hidden;
+        position: absolute;
+        background:
+            url("orange.jpg") no-repeat -9999px -9999px,
+            url("blue.jpg") no-repeat -9999px -9999px,
+            url("green.jpg") no-repeat -9999px -9999px,
+            url("purple.jpg") no-repeat -9999px -9999px,
+    }
+
+
+#heart-frame1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10vh;
+    height: 100%;
+    background-image: url("heart.png");
+    background-repeat: repeat-y;
+    background-position: top center;
+    background-size: 10vh auto;
+    z-index: 1;
+}
+
+#heart-frame2 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 10vh;
+    height: 100%;
+    background-image: url("heart.png");
+    background-repeat: repeat-y;
+    background-position: top center;
+    background-size: 10vh auto;
+    z-index: 1;
+}
+
+#heart-frame3 {
+    position: absolute;
+    top: 0;
+    left: 10vh;
+    width: calc(100% - 20vh);
+    height: 10vh;
+    background-image: url("heart.png");
+    background-repeat: repeat-x;
+    background-position: left center;
+    background-size: auto 10vh;
+    z-index: 1;
+}
+
+#heart-frame4 {
+    position: absolute;
+    bottom: 0;
+    left: 10vh;
+    width: calc(100% - 20vh);
+    height: 10vh;
+    background-image: url("heart.png");
+    background-repeat: repeat-x;
+    background-position: left center;
+    background-size: auto 10vh;
+    z-index: 1;
+}
+
+#heart-frame1, #heart-frame2, #heart-frame3, #heart-frame4 {
+    position: fixed;
+    z-index: 10;
+    pointer-events: none;
+}   
+
+#landing-content1 {
+    position: relative;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 175px; 
+    font-size: 4em;
+    font-weight: 500;
+}
+
+@keyframes gentle-bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-6px);
+    }
+}
+
+#landing-content2 {
+    position: relative;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px; 
+    font-size: 2em;
+    font-weight: 400;
+    animation: gentle-bounce 1.6s ease-in-out infinite;
+}
+
+/*--------card--------*/
+.card {
+    background-color: #C81D25;
+    width: 50vw;
+    margin-top: 300px;
+    margin-bottom: 300px;
+    text-align: center;
+    padding: 20px;
+    border-radius: 20px;
+    color: white;
+    font-size: 2em;
+    position: relative;
+    z-index: 1;
+}
+
+.song2 {
+    margin-top: 150px;
+}
+
+.song3 {
+    margin-top: 150px;
+}
+
+.song4 {
+    margin-top: 150px;
+    margin-bottom: 150px;
+}

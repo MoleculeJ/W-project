@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Valentine's Playlist</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Delius&display=swap" rel="stylesheet" />
+
+        <link href="style.css" rel="stylesheet" />
+    </head>
+
+    <body>
+        <main class="landing">
+            <div id="heart-frame1"></div>
+            <div id="heart-frame2"></div>
+            <div id="heart-frame3"></div>
+            <div id="heart-frame4"></div>
+            <p id="landing-content1">Today’s Playlist<br />for<br />ぱぴさん</p>
+            <p id="landing-content2">scroll down and enjoy ngub<br />↓</p>
+            <div class="card song1">
+                <iframe
+                    width="70%"
+                    height="300vh"
+                    src="https://www.youtube.com/embed/vUHDR6Rg3Y4?si=7IrowK9ssOOZBNSu"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen></iframe
+                ><br />
+                “...Every time you smile, I smile.<br />And every time you shine, I'll shine for you...”
+            </div>
+            <div class="card song2">
+                <iframe
+                    width="70%"
+                    height="300vh"
+                    src="https://www.youtube.com/embed/x2XX3cNW4K0?si=hUyo5a09YHx4KwNJ"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen></iframe
+                ><br />
+                “...Give Love 사랑을 좀 주세요<br />Give Love 사랑이 모자라요<br />매일매일 자라는 사랑을...”
+            </div>
+            <div class="card song3">
+                <iframe
+                    width="70%"
+                    height="300vh"
+                    src="https://www.youtube.com/embed/BHfL4ns7-CM?si=bVCI5prbbTpY9Rga"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen></iframe
+                ><br />
+                “...晴れた青い春に...桜が空を舞う<br />二人の想いが、今重なり合う...恋をしてる...”
+            </div>
+            <div class="card song4">
+                <iframe
+                    width="70%"
+                    height="300vh"
+                    src="https://www.youtube.com/embed/3Xx5trKelGY?si=3CAJ_E0XJ0e6aT20"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen></iframe
+                ><br />
+                <span style="font-family: helvetica, sans-serif"
+                    >“...ขอบคุณนะ ที่เธอรักฉัน<br />และทำให้ปีนี้ไม่ต้องเหงาเหมือนเดิม...”</span
+                >
+            </div>
+        </main>
+
+        <div class="preload"></div>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                const section = document.querySelector(".landing");
+                const song = document.querySelector(".song1");
+
+                const observer = new IntersectionObserver(
+                    (entries) => {
+                        entries.forEach((entry) => {
+                            if (entry.isIntersecting) {
+                                section.classList.add("orange");
+                            } else {
+                                section.classList.remove("orange");
+                            }
+                        });
+                    },
+                    {
+                        threshold: 0.25
+                    }
+                );
+                observer.observe(song);
+            });
+
+            document.addEventListener("DOMContentLoaded", () => {
+                const section = document.querySelector(".landing");
+                const song = document.querySelector(".song2");
+
+                const observer = new IntersectionObserver(
+                    (entries) => {
+                        entries.forEach((entry) => {
+                            if (entry.isIntersecting) {
+                                section.classList.add("blue");
+                            } else {
+                                section.classList.remove("blue");
+                            }
+                        });
+                    },
+                    {
+                        threshold: 0.25
+                    }
+                );
+                observer.observe(song);
+            });
+
+            document.addEventListener("DOMContentLoaded", () => {
+                const section = document.querySelector(".landing");
+                const song = document.querySelector(".song3");
+
+                const observer = new IntersectionObserver(
+                    (entries) => {
+                        entries.forEach((entry) => {
+                            if (entry.isIntersecting) {
+                                section.classList.add("green");
+                            } else {
+                                section.classList.remove("green");
+                            }
+                        });
+                    },
+                    {
+                        threshold: 0.25
+                    }
+                );
+                observer.observe(song);
+            });
+
+            document.addEventListener("DOMContentLoaded", () => {
+                const section = document.querySelector(".landing");
+                const song = document.querySelector(".song4");
+
+                const observer = new IntersectionObserver(
+                    (entries) => {
+                        entries.forEach((entry) => {
+                            if (entry.isIntersecting) {
+                                section.classList.add("purple");
+                            } else {
+                                section.classList.remove("purple");
+                            }
+                        });
+                    },
+                    {
+                        threshold: 0.25
+                    }
+                );
+                observer.observe(song);
+            });
+        </script>
+    </body>
+</html>
