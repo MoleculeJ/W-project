@@ -13,46 +13,47 @@ font-weight: 400;
 font-style: normal;
 */
 
-/* DEFAULT */
-body {
-    margin: 0;
-    font-family: "Delius", cursive;
-    color: black;
-    scroll-behavior: smooth;    
-}
+@media screen {
+    /* DEFAULT */
+    body {
+        margin: 0;
+        font-family: "Delius", cursive;
+        color: black;
+        scroll-behavior: smooth;
+    }
 
-/*--------Landing---------*/
-.landing {
-    position: relative;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    background-image: url("pink.jpg");
-    background-size: cover;
-    background-attachment: fixed; 
-    overflow: visible;
-    transition: background-image 0.3s ease-in-out;
-}
+    /*--------Landing---------*/
+    .landing {
+        position: relative;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        background-image: url("pink.jpg");
+        background-size: cover;
+        background-attachment: fixed;
+        overflow: visible;
+        transition: background-image 0.6s ease-in-out;
+    }
 
-.landing.orange {
-    background-image: url("orange.jpg");
-}
+    .landing.orange {
+        background-image: url("orange.jpg");
+    }
 
-.landing.blue {
-    background-image: url("blue.jpg");
-}
+    .landing.blue {
+        background-image: url("blue.jpg");
+    }
 
-.landing.green {
-    background-image: url("green.jpg");
-}
+    .landing.green {
+        background-image: url("green.jpg");
+    }
 
-.landing.purple {
-    background-image: url("purple.jpg");
-}
+    .landing.purple {
+        background-image: url("purple.jpg");
+    }
 
-.preload {
+    .preload {
         width: 0;
         height: 0;
         overflow: hidden;
@@ -62,122 +63,191 @@ body {
             url("orange.jpg") no-repeat -9999px -9999px,
             url("blue.jpg") no-repeat -9999px -9999px,
             url("green.jpg") no-repeat -9999px -9999px,
-            url("purple.jpg") no-repeat -9999px -9999px,
+            url("purple.jpg") no-repeat -9999px -9999px;
     }
 
-
-#heart-frame1 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 10vh;
-    height: 100%;
-    background-image: url("heart.png");
-    background-repeat: repeat-y;
-    background-position: top center;
-    background-size: 10vh auto;
-    z-index: 1;
-}
-
-#heart-frame2 {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 10vh;
-    height: 100%;
-    background-image: url("heart.png");
-    background-repeat: repeat-y;
-    background-position: top center;
-    background-size: 10vh auto;
-    z-index: 1;
-}
-
-#heart-frame3 {
-    position: absolute;
-    top: 0;
-    left: 10vh;
-    width: calc(100% - 20vh);
-    height: 10vh;
-    background-image: url("heart.png");
-    background-repeat: repeat-x;
-    background-position: left center;
-    background-size: auto 10vh;
-    z-index: 1;
-}
-
-#heart-frame4 {
-    position: absolute;
-    bottom: 0;
-    left: 10vh;
-    width: calc(100% - 20vh);
-    height: 10vh;
-    background-image: url("heart.png");
-    background-repeat: repeat-x;
-    background-position: left center;
-    background-size: auto 10vh;
-    z-index: 1;
-}
-
-#heart-frame1, #heart-frame2, #heart-frame3, #heart-frame4 {
-    position: fixed;
-    z-index: 10;
-    pointer-events: none;
-}   
-
-#landing-content1 {
-    position: relative;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 175px; 
-    font-size: 4em;
-    font-weight: 500;
-}
-
-@keyframes gentle-bounce {
-    0%, 100% {
-        transform: translateY(0);
+    #heart-frame1 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 10vh;
+        height: 100%;
+        background-image: url("heart.png");
+        background-repeat: repeat-y;
+        background-position: top center;
+        background-size: 10vh auto;
+        z-index: 1;
     }
-    50% {
-        transform: translateY(-6px);
+
+    #heart-frame2 {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 10vh;
+        height: 100%;
+        background-image: url("heart.png");
+        background-repeat: repeat-y;
+        background-position: top center;
+        background-size: 10vh auto;
+        z-index: 1;
     }
+
+    #heart-frame3 {
+        position: absolute;
+        top: 0;
+        left: 10vh;
+        width: calc(100% - 20vh);
+        height: 10vh;
+        background-image: url("heart.png");
+        background-repeat: repeat-x;
+        background-position: left center;
+        background-size: auto 10vh;
+        z-index: 1;
+    }
+
+    #heart-frame4 {
+        position: absolute;
+        bottom: 0;
+        left: 10vh;
+        width: calc(100% - 20vh);
+        height: 10vh;
+        background-image: url("heart.png");
+        background-repeat: repeat-x;
+        background-position: left center;
+        background-size: auto 10vh;
+        z-index: 1;
+    }
+
+    #heart-frame1,
+    #heart-frame2,
+    #heart-frame3,
+    #heart-frame4 {
+        position: fixed;
+        z-index: 10;
+        pointer-events: none;
+    }
+
+    #landing-content1 {
+        position: relative;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 175px;
+        font-size: 4em;
+        font-weight: 500;
+    }
+
+    @keyframes gentle-bounce {
+        0%,
+        100% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-6px);
+        }
+    }
+
+    #landing-content2 {
+        position: relative;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 5px;
+        font-size: 2em;
+        font-weight: 400;
+        animation: gentle-bounce 1.6s ease-in-out infinite;
+    }
+
+    /*--------card--------*/
+    .card {
+        background-color: #c81d25;
+        width: 50vw;
+        margin-top: 300px;
+        margin-bottom: 300px;
+        text-align: center;
+        padding: 20px;
+        border-radius: 20px;
+        color: white;
+        font-size: 2em;
+        position: relative;
+        z-index: 1;
+    }
+
+    .song2 {
+        margin-top: 150px;
+    }
+
+    .song3 {
+        margin-top: 150px;
+    }
+
+    .song4 {
+        margin-top: 150px;
+        margin-bottom: 150px;
+    }
+    
+    .video-wrapper {
+        margin: 0;
+        padding: 0;
+    }
+    
 }
 
-#landing-content2 {
-    position: relative;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 5px; 
-    font-size: 2em;
-    font-weight: 400;
-    animation: gentle-bounce 1.6s ease-in-out infinite;
-}
+@media (max-width: 576px) {
+    #heart-frame1 {
+        width: 5vh;
+        background-size: 5vh auto;
+    }
 
-/*--------card--------*/
-.card {
-    background-color: #C81D25;
-    width: 50vw;
-    margin-top: 300px;
-    margin-bottom: 300px;
-    text-align: center;
-    padding: 20px;
-    border-radius: 20px;
-    color: white;
-    font-size: 2em;
-    position: relative;
-    z-index: 1;
-}
+    #heart-frame2 {
+        width: 5vh;
+        background-size: 5vh auto;
+    }
 
-.song2 {
-    margin-top: 150px;
-}
+    #heart-frame3 {
+        left: 5vh;
+        width: calc(100% - 10vh);
+        height: 5vh;
+        background-size: auto 5vh;
+    }
 
-.song3 {
-    margin-top: 150px;
-}
+    #heart-frame4 {
+        left: 5vh;
+        width: calc(100% - 10vh);
+        height: 5vh;
+        background-size: auto 5vh;
+    }
 
-.song4 {
-    margin-top: 150px;
-    margin-bottom: 150px;
+    #landing-content1 {
+        margin-top: 300px;
+        font-size: 2.5em;
+        font-weight: 580;
+    }
+
+    #landing-content2 {
+        margin-top: 125px;
+        font-size: 1.25em;
+        font-weight: 400;
+    }
+
+    .card {
+        width: 65vw;
+        font-size: 1.25em;
+    }
+    
+    .video-wrapper {
+        width: 100%;
+        aspect-ratio: 16 / 9;
+    }
+
+    .video-wrapper iframe {
+        width: 100%;
+        height: 100%;
+        border: 0;
+    }
+    
+    .song4 {
+        margin-bottom: 250px;
+    }
+    
 }
