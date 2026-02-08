@@ -58,7 +58,7 @@ body {
         overflow: hidden;
         position: absolute;
         background:
-            url("pink.jpg") -9999px -9999px,
+            url("pink.jpg") no-repeat -9999px -9999px,
             url("orange.jpg") no-repeat -9999px -9999px,
             url("blue.jpg") no-repeat -9999px -9999px,
             url("green.jpg") no-repeat -9999px -9999px,
